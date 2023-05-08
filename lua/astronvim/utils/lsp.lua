@@ -109,7 +109,7 @@ M.on_attach = function(client, bufnr)
   local capabilities = client.server_capabilities
   local lsp_mappings = {
     n = {
-      ["<leader>ld"] = {
+      ["ld"] = {
         function() vim.diagnostic.open_float() end,
         desc = "Hover diagnostics",
       },
@@ -254,7 +254,7 @@ M.on_attach = function(client, bufnr)
       function() vim.lsp.buf.references() end,
       desc = "References of current symbol",
     }
-    lsp_mappings.n["<leader>lR"] = {
+    lsp_mappings.n["gr"] = {
       function() vim.lsp.buf.references() end,
       desc = "Search references",
     }
